@@ -1,0 +1,37 @@
+{
+	"name": "Browser Util",
+	"version": "1.0",
+	"description": "Utility functions to improve productivity",
+	"permissions": [
+		"activeTab",
+		"declarativeContent",
+		"storage",
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	//"options_page": "options.html",
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"run_at": "document_end",
+			"js": ["contentScript.js"]
+		}
+	],
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "images/16.png",
+			"32": "images/32.png",
+			"48": "images/48.png",
+			"128": "images/128.png"
+		}
+	},
+	"icons": {
+		"16": "images/16.png",
+		"32": "images/32.png",
+		"48": "images/48.png",
+		"128": "images/128.png"
+	},
+	"manifest_version": 2
+}
