@@ -13,13 +13,13 @@
 	//"options_page": "options.html",
 	"content_scripts": [
 		{
-			"matches": ["*://www.youtube.com/watch*"],
+			"matches": ["*://www.youtube.com/*"],
 			"run_at": "document_end",
 			"js": ["contentScript-youtube.js"]
 		},
 		{
 			"matches": ["<all_urls>"],
-			"exclude_matches": ["*://www.youtube.com/watch*"],
+			"exclude_matches": ["*://www.youtube.com/*"],
 			"run_at": "document_idle",
 			"js": ["contentScript-all.js"]
 		}
