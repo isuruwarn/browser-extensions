@@ -2,15 +2,23 @@
 	"name": "Browser Util",
 	"version": "1.0",
 	"description": "Utility functions to improve productivity",
+	"applications": {
+		"gecko": {
+			"id": "browser-util@mozilla.org",
+			"strict_min_version": "57.0a1"
+		}
+	},
 	"permissions": [
 		"activeTab",
-		"declarativeContent",
 		"storage",
 		"tabs",
 		"http://*/*",
 		"https://*/*"
 	],
-	//"options_page": "options.html",
+	"options_ui": {
+		"page": "popup.html",
+		"browser_style": true
+	},
 	"content_scripts": [
 		{
 			"matches": ["*://www.youtube.com/watch*"],
